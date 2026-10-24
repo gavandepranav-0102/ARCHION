@@ -1,0 +1,10 @@
+import { Router } from "express";
+import { runFCFS, runSJF, runSRTF, runPriority, runPriorityPreemptive, runRoundRobin } from "../controllers/schedulingController.js";
+const router=Router();
+router.post("/fcfs",runFCFS);
+router.post("/sjf",runSJF);
+router.post("/srtf",runSRTF);
+router.post("/priority",runPriority);
+router.post("/priorityPreemptive",runPriorityPreemptive);
+router.post("/roundRobin",runRoundRobin);
+export default router;
